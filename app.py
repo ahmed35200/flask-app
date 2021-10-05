@@ -1,7 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 import urllib.request
 import ssl
@@ -9,7 +5,6 @@ import urllib.request as rq
 import cv2
 import urllib.request
 import requests
-from PIL import Image
 
 from flask import Flask, request, abort
 
@@ -36,7 +31,6 @@ def hashing():
     urllib.request.urlretrieve(
         'https://dwjz5q0kg4677.cloudfront.net/C3653D2D-B1DD-4311-993F-E4736934AC8D.jpeg',
         "gfg")
-    img = Image.open("gfg")
     image = cv2.imread("gfg")
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     cv2.waitKey(0)
